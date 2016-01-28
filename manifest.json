@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Link Star",
+    "version": "1",
+    "version_name": "1.0 alpha",
+
+    "default_locale": "en_US",
+    "description": "__MSG_extDescription__",
+
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "38": "images/icon38.png"
+        },
+        "default_title": "__MSG_extTitle__",
+        "default_popup": "popup/main.html"
+    },
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+    "permissions": [
+        "tabs"
+    ]
+}

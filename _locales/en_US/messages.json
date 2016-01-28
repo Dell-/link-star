@@ -1,0 +1,24 @@
+{
+    "extDescription": {
+        "message": "Your rating for a web links.",
+        "description": "Extension description"
+    },
+    "extTitle": {
+        "message": "Rating for links.",
+        "description": "Extension title"
+    },
+    "linkTitle": {
+        "message": "Current link.",
+        "description": "Current link title"
+    },
+    "ratingTitle": {
+        "message": "Rating star $rating$.",
+        "description": "Current rating.",
+        "placeholders": {
+            "rating": {
+                "content": "$1",
+                "example": 0
+            }
+        }
+    }
+}

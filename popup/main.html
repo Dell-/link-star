@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>Set rating for this link</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../lib/jquery-2.2.0.js"></script>
+    <script src="../lib/knockout-3.4.0.js"></script>
+</head>
+<body>
+    <label data-bind='text: title, attr: {for: "current-url"}'></label>
+    <input data-bind='disable: true, value: pageLink, attr: {id: "current-url", type: "url", name: "link"}'/>
+    <div class="rating-container">
+        <ul data-bind='foreach: stars
+                , attr: {id: "stars", class: "rating"}'>
+            <li data-bind='attr: {
+                            "data-rating": rating
+                            , class: active() ? "rating-item is-active" : "rating-item"
+                            , title: name}
+                            , event: {
+                                mouseover: $parent.overHandler.bind($parent)
+                                , mouseout: $parent.outHandler
+                                , click: $parent.clickHandler}'></li>
+        </ul>
+    </div>
+    <p data-bind="text: ratingTitle"></p>
+    <script src="main.js"></script>
+</body>
+</html>
