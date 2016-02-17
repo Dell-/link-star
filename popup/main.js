@@ -1,7 +1,9 @@
 jQuery(document).ready(function ($) {
     'use strict';
 
-    var rating = {
+    var width = $('.rating-container').width(),
+        height = $('.rating-container').height(),
+        rating = {
             title: chrome.i18n.getMessage('linkTitle'),
             pageLink: ko.observable(''),
             value: ko.observable(3),
@@ -40,6 +42,15 @@ jQuery(document).ready(function ($) {
 
     chrome.tabs.getSelected(null, function (tab) {
         this.pageLink(tab.url);
+        window.gapi.plusone.render(
+            'g-plusone',
+            {
+                "width": "450px",
+                "annotation": "inline",
+                "recommendations": false,
+                "href": tab.url
+            }
+        );
     }.bind(rating));
 
     rating.current(rating.value());

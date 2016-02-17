@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="../lib/jquery-2.2.0.js"></script>
     <script src="../lib/knockout-3.4.0.js"></script>
+    <script src="../lib/jquery-observe.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer>{parsetags: 'explicit'}</script>
 </head>
 <body>
     <label data-bind='text: title, attr: {for: "current-url"}'></label>
@@ -21,8 +23,9 @@
                                 , mouseout: $parent.outHandler
                                 , click: $parent.clickHandler}'></li>
         </ul>
+        <p data-bind="text: ratingTitle"></p>
+        <div id="g-plusone"></div>
     </div>
-    <p data-bind="text: ratingTitle"></p>
     <script src="main.js"></script>
 </body>
 </html>
